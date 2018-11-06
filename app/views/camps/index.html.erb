@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <% @camps.each do |camp| %>
+      <div class="col-xs-12 col-md-4">
+        <%= link_to camp_path(camp), :class => 'card-link' do  %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <p><%= camp.description %></p>
+            </div>
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            <a class="card-link" href="#" ></a>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
