@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  namespace :users do
+  resources :users do
     resources :bookings, only: [:index, :show]
   end
 

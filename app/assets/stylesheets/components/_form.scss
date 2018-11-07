@@ -14,3 +14,12 @@
   font-size: 15px;
   color: rgb(100, 100, 100);
 }
+
+#photo_preview {
+  height: 200px;
+
+  img {
+    max-width:100%;
+    max-height:100%;
+  }
+}

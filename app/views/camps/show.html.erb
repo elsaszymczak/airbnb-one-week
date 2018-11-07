@@ -1,3 +1,5 @@
 <div class="container">
   <%= @camp.name %>
+  <%= cl_image_tag @camp.photo, height: 300, width: 400, crop: :fill, alt: "camp" %>
+  <%= link_to 'Book now', new_camp_booking_path(@camp), class: 'btn btn-primary' %>
 </div>

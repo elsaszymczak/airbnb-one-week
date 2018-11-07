@@ -1,19 +1,18 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.png" alt="logo">
+    <%= image_tag "logo.png", alt: "logo" %>
   </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <%= link_to 'Add a bootcamp', new_camp_path, class: "navbar-wagon-item navbar-wagon-link"  %>
-      <%= link_to 'My camps',  %>
-      <%= link_to 'My bookings' %>
+      <%= link_to 'Camps', camps_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+
     <% end %>
 
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Add a bootcamp</a>
     <a href="" class="navbar-wagon-item navbar-wagon-link">My bookings</a>
     <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
 
@@ -24,7 +23,7 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete  %></li>
         </ul>
       </div>
     </div>

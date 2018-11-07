@@ -41,6 +41,6 @@ class CampsController < ApplicationController
   private
 
   def camp_params
-    params.require(:camp).permit(:name, :description, :location, :price)
+    params.require(:camp).permit(:name, :description, :location, :price, :photo)
   end
 end
